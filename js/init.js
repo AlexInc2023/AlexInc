@@ -67,3 +67,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	nameElement.innerHTML = newNameHTML;
 });
+/* makes each letter a diffrent color when hovered*/
+document.addEventListener('DOMContentLoaded', function () {
+    const nameElement = document.getElementById('name');
+    const nameText = nameElement.textContent;
+    let newNameHTML = '';
+
+    for (const letter of nameText) {
+        newNameHTML += letter === ' ' ? ' ' : `<span class="hover-letter">${letter}</span>`;
+    }
+
+    nameElement.innerHTML = newNameHTML;
+
+    const colors = [
+        "#E40303",
+        "#FF8C00",
+        "#FFED00",
+        "#008026",
+        "#004DFF",
+        "#750787",
+    ];
+
+    const letters = document.querySelectorAll('.hover-letter');
+
+    letters.forEach((letter) => {
+        letter.addEventListener('mouseover', () => {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            letter.style.color = randomColor;
+        });
+    });
+});

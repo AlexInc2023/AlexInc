@@ -115,6 +115,7 @@ pre {
 .fa-discord,
 .fa-github,
 .fa-envelope,
+.fa-circle-dollar-to-slot,
 .fa-linkedin {
    color: white;
    -webkit-text-stroke-width: 1px;
@@ -124,6 +125,7 @@ pre {
 .fa-discord:hover,
 .fa-github:hover,
 .fa-envelope:hover,
+.fa-circle-dollar-to-slot:hover,
 .fa-linkedin:hover {
    font-size: 130%;
    color: darkgray;
@@ -148,6 +150,14 @@ pre {
 .scrolldown a i {
    color: white;
 }
+.scrolldown .smoothscroll i {
+   transition: transform 0.3s ease;
+}
+
+.scrolldown .smoothscroll i:hover {
+   transform: scale(1.2); /* Adjust scale as necessary */
+}
+
 
 /*Changes color of scroll down icon to dark grey and enlarges when hovered  */
 .scrolldown a:hover i {
