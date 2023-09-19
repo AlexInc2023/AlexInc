@@ -80,21 +80,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     nameElement.innerHTML = newNameHTML;
 
-    const colors = [
-        "#E40303",
-        "#FF8C00",
-        "#FFED00",
-        "#008026",
-        "#004DFF",
-        "#750787",
-    ];
-
     const letters = document.querySelectorAll('.hover-letter');
 
     letters.forEach((letter) => {
         letter.addEventListener('mouseover', () => {
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            const randomColor = getRandomRainbowColor();
             letter.style.color = randomColor;
         });
     });
 });
+
+function getRandomRainbowColor() {
+    const hue = Math.floor(Math.random() * 360);
+    return `hsl(${hue}, 100%, 50%)`;
+}
+
