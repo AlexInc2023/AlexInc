@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	nameElement.innerHTML = newNameHTML;
 });
+
 /* makes each letter a diffrent color when hovered*/
 document.addEventListener('DOMContentLoaded', function () {
     const nameElement = document.getElementById('name');
