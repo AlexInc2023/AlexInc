@@ -84,14 +84,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     letters.forEach((letter) => {
         letter.addEventListener('mouseover', () => {
-            const randomColor = getRandomRainbowColor();
+            const randomColor = getRandomPrideColor();
             letter.style.color = randomColor;
         });
     });
 });
 
-function getRandomRainbowColor() {
-    const hue = Math.floor(Math.random() * 360);
-    return `hsl(${hue}, 100%, 50%)`;
-}
+function getRandomPrideColor() {
+    // Define the 6 LGBTQ+ pride colors
+    const prideColors = [
+        'rgb(255, 0, 0)',     // Red
+        'rgb(255, 165, 0)',  // Orange
+        'rgb(255, 255, 0)',  // Yellow
+        'rgb(0, 128, 0)',    // Green
+        'rgb(0, 0, 255)',    // Blue
+        'rgb(128, 0, 128)'   // Purple
+    ];
 
+    // Pick a random color from the array
+    const randomIndex = Math.floor(Math.random() * prideColors.length);
+    return prideColors[randomIndex];
+}
