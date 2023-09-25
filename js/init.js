@@ -105,3 +105,26 @@ function getRandomPrideColor() {
     const randomIndex = Math.floor(Math.random() * prideColors.length);
     return prideColors[randomIndex];
 }
+
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "block";
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "none";
+}
+
+
+// Close the modal if the user clicks outside of the modal content
+window.onclick = function(event) {
+    const modalIds = ["myModal", "modalSarah", "modalKevin", "modalCameron", "modalOther"]; // add all modal ids here
+    modalIds.forEach(id => {
+        const modal = document.getElementById(id);
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+}
+

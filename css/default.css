@@ -116,6 +116,7 @@ pre {
 .fa-github,
 .fa-envelope,
 .fa-circle-dollar-to-slot,
+.fa-instagram,
 .fa-linkedin {
    color: white;
    -webkit-text-stroke-width: 1px;
@@ -125,6 +126,7 @@ pre {
 .fa-discord:hover,
 .fa-github:hover,
 .fa-envelope:hover,
+.fa-instagram:hover,
 .fa-circle-dollar-to-slot:hover,
 .fa-linkedin:hover {
    font-size: 130%;
