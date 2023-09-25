@@ -106,20 +106,21 @@ function getRandomPrideColor() {
     return prideColors[randomIndex];
 }
 
+// Function to open a modal
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
     modal.style.display = "block";
 }
 
+// Function to close a modal
 function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     modal.style.display = "none";
 }
 
-
 // Close the modal if the user clicks outside of the modal content
 window.onclick = function(event) {
-    const modalIds = ["myModal", "modalSarah", "modalKevin", "modalCameron", "modalOther"]; // add all modal ids here
+    const modalIds = ["myModal", "modalSarah", "modalKevin", "modalCameron", "modalOther","modalScott","modalSara"]; // Add all modal ids here
     modalIds.forEach(id => {
         const modal = document.getElementById(id);
         if (event.target === modal) {
@@ -127,4 +128,5 @@ window.onclick = function(event) {
         }
     });
 }
+
 
