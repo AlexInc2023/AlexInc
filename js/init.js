@@ -104,5 +104,12 @@ window.onclick = function(event) {
         }
     });
 }
+// Download flier
+document.querySelectorAll('.item-wrap a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        console.log('Download initiated for:', this.href);
+    });
+});
+
 
 
