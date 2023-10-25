@@ -119,10 +119,7 @@ var span = document.getElementsByClassName('close-btn')[0];
 
 // Show the modal when the page loads
 window.onload = function () {
-    if (!localStorage.getItem('modalShown')) {
-        modal.style.display = "block";
-        localStorage.setItem('modalShown', 'true');
-    }
+    modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -136,6 +133,7 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
 
 
 
