@@ -1,47 +1,47 @@
 
 /* Smooth Scrolling */
 jQuery(document).ready(function ($) {
-	$('.smoothscroll').on('click', function (e) {
-		e.preventDefault();
+    $('.smoothscroll').on('click', function (e) {
+        e.preventDefault();
 
-		var target = this.hash,
-			$target = $(target);
+        var target = this.hash,
+            $target = $(target);
 
-		$('html, body').stop().animate({
-			'scrollTop': $target.offset().top
-		}, 800, 'swing', function () {
-			window.location.hash = target;
-		});
-	});
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 800, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
 
-	/*Make sure that header-background-image height is equal to the browser height.*/
-	$('header').css({ 'height': $(window).height() });
-	$(window).on('resize', function () {
+    /*Make sure that header-background-image height is equal to the browser height.*/
+    $('header').css({ 'height': $(window).height() });
+    $(window).on('resize', function () {
 
-		$('header').css({ 'height': $(window).height() });
-		$('body').css({ 'width': $(window).width() })
-	});
+        $('header').css({ 'height': $(window).height() });
+        $('body').css({ 'width': $(window).width() })
+    });
 
-	/*Creates grey nav bar*/
-	$(window).on('ready', function () {
-		var y = $(window).scrollTop();
-		var nav = $('#nav-wrap');
+    /*Creates grey nav bar*/
+    $(window).on('ready', function () {
+        var y = $(window).scrollTop();
+        var nav = $('#nav-wrap');
 
-		nav.addClass('opaque').fadeIn('fast');
-	});
+        nav.addClass('opaque').fadeIn('fast');
+    });
 });
 
 /*Makes responsive headline responsive when hovered */
 document.addEventListener('DOMContentLoaded', function () {
-	const nameElement = document.getElementById('name');
-	const nameText = nameElement.textContent;
-	let newNameHTML = '';
+    const nameElement = document.getElementById('name');
+    const nameText = nameElement.textContent;
+    let newNameHTML = '';
 
-	for (const letter of nameText) {
-		newNameHTML += letter === ' ' ? ' ' : `<span class="hover-letter">${letter}</span>`;
-	}
+    for (const letter of nameText) {
+        newNameHTML += letter === ' ' ? ' ' : `<span class="hover-letter">${letter}</span>`;
+    }
 
-	nameElement.innerHTML = newNameHTML;
+    nameElement.innerHTML = newNameHTML;
 });
 
 /* makes each letter a diffrent color when hovered*/
@@ -95,8 +95,8 @@ function closeModal(modalId) {
 }
 
 // Close the modal if the user clicks outside of the modal content
-window.onclick = function(event) {
-    const modalIds = ["myModal", "modalSarah", "modalKevin", "modalCameron", "modalOther","modalScott","modalSara"]; // Add all modal ids here
+window.onclick = function (event) {
+    const modalIds = ["myModal", "modalSarah", "modalKevin", "modalCameron", "modalOther", "modalScott", "modalSara"]; // Add all modal ids here
     modalIds.forEach(id => {
         const modal = document.getElementById(id);
         if (event.target === modal) {
@@ -105,11 +105,38 @@ window.onclick = function(event) {
     });
 }
 // Download flier
-document.querySelectorAll('.item-wrap a').forEach(function(link) {
-    link.addEventListener('click', function() {
+document.querySelectorAll('.item-wrap a').forEach(function (link) {
+    link.addEventListener('click', function () {
         console.log('Download initiated for:', this.href);
     });
 });
+
+// Get the modal
+var modal = document.getElementById('newsletterModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName('close-btn')[0];
+
+// Show the modal when the page loads
+window.onload = function () {
+    if (!localStorage.getItem('modalShown')) {
+        modal.style.display = "block";
+        localStorage.setItem('modalShown', 'true');
+    }
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 
 
 
