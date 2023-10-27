@@ -41,11 +41,13 @@
                         <h5>Upcoming Events</h5>
                     </div>
                 </div>
-        
-                <div class="event-item">
+
+                <div class="event-item" data-event-date="2023-12-16">
                     <div class="event-image">
-                        <a href="images/Winter Solstice Dance.jpg" download="Winter_Solstice_Dance">
-                            <img src="images/Winter Solstice Dance.jpg" alt="Winter Solstice Dance">
+                        <a href="images/Winter Solstice Dance.jpg"
+                            download="Winter_Solstice_Dance">
+                            <img src="images/Winter Solstice Dance.jpg"
+                                alt="Winter Solstice Dance">
                         </a>
                     </div>
                     <div class="event-info">
@@ -56,20 +58,21 @@
                         <p>Ages: 14-20</p>
                     </div>
                 </div>
-                <div class="event-item">
+                <div class="event-item" data-event-date="2024-1-03">
                     <div class="event-image">
-                        <img src="images/Trans101Flier" alt="Trans 101 with Tony Ferraiolo and Clare McCarthy"> <!-- Placeholder Image -->
+                        <img src="images/Trans101Flier"
+                            alt="Trans 101 with Tony Ferraiolo and Clare McCarthy">
+                        <!-- Placeholder Image -->
                     </div>
                     <div class="event-info">
                         <h5>Trans 101 with Tony Ferraiolo and Clare McCarthy</h5>
                         <p>Location and Date TBD</p>
                     </div>
                 </div>
-        
+
                 <!-- Additional events can be added here in the same format as the above event -->
             </div>
         </section>
-        
 
         <!-- Portfolio Section End-->
 
@@ -89,13 +92,30 @@
         <script src="js/init.js"></script>
 
         <!-- Donation Modal -->
-   <div id="donationModal" class="modal">
-    <div class="modal-content">
-       <span class="close-btn">&times;</span>
-       <h2>Donation Notice</h2>
-       <p>All donations support ALEX. You will be redirected to a different site for donations.</p>
-       <a href="https://www.guilfordpride.com/checkout/donate?donatePageId=63da929ed689af4196cf4056" class="subscribe-btn" target="_blank">Proceed to Donate</a>
-    </div>
- </div>
+        <div id="donationModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Donation Notice</h2>
+                <p>All donations support ALEX. You will be redirected to a
+                    different site for donations.</p>
+                <a
+                    href="https://www.guilfordpride.com/checkout/donate?donatePageId=63da929ed689af4196cf4056"
+                    class="subscribe-btn" target="_blank">Proceed to Donate</a>
+            </div>
+        </div>
     </body>
+    <!-- Script to remove past events -->
+    <script> 
+    document.addEventListener('DOMContentLoaded', function() {
+        var currentDate = new Date();
+        var events = document.querySelectorAll('.event-item');
+    
+        events.forEach(function(event) {
+            var eventDate = new Date(event.getAttribute('data-event-date'));
+            if (eventDate < currentDate) {
+                event.remove();
+            }
+        });
+    });
+    </script>
 </html>
