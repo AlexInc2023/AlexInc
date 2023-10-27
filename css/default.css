@@ -1223,6 +1223,35 @@ input[type="checkbox"] {
    }
 
 }
+@media only screen and (max-width: 768px) {
+   .events-container .event-item {
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+   }
+
+   .events-container .event-image img {
+       max-width: 100%;
+       height: auto;
+   }
+
+   .events-container .event-info h5 {
+       font-size: 1.2em;
+   }
+
+   .events-container .event-info p {
+       font-size: 0.9em;
+   }
+}
+
+.events-container {
+   overflow: auto; /* Allows scrolling if content overflows */
+   padding-bottom: 20px; /* Adds space at the bottom */
+}
+
+footer {
+   clear: both; /* Clears any floats */
+}
 
 /* mobile wide/smaller tablets */
 @media only screen and (max-width: 767px) {

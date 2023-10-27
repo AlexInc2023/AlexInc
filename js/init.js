@@ -111,7 +111,7 @@ document.querySelectorAll('.item-wrap a').forEach(function (link) {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Get the modal
     var modal = document.getElementById('newsletterModal');
 
@@ -169,66 +169,58 @@ document.querySelectorAll('.item-wrap a').forEach(function (link) {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the modal
-    var modal = document.getElementById('newsletterModal');
-
-    // Check if modal exists
-    if (!modal) return;
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName('close-btn')[0];
-
-    // Show the modal when the page loads
-    window.onload = function () {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    if (span) {
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the donation modal
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the modals
+    var newsletterModal = document.getElementById('newsletterModal');
     var donationModal = document.getElementById('donationModal');
 
-    // Get the button that opens the donation modal
-    var donationBtn = document.getElementById('donationTab');
+    // Get the <span> elements that close the modals
+    var closeNewsletterModal = document.querySelector('#newsletterModal .close-btn');
+    var closeDonationModal = document.querySelector('#donationModal .close-btn');
 
-    // When the user clicks the button, open the donation modal 
-    donationBtn.onclick = function(event) {
-        event.preventDefault(); // Prevent the default action
-        donationModal.style.display = "block";
+    // Show the newsletter modal when the page loads
+    if (newsletterModal) {
+        window.onload = function () {
+            newsletterModal.style.display = "block";
+        }
     }
 
-    // Get the <span> element that closes the donation modal
-    var span = donationModal.getElementsByClassName('close-btn')[0];
+    // When the user clicks on <span> (x), close the newsletter modal
+    if (closeNewsletterModal) {
+        closeNewsletterModal.onclick = function () {
+            newsletterModal.style.display = "none";
+        }
+    }
 
     // When the user clicks on <span> (x), close the donation modal
-    if (span) {
-        span.onclick = function() {
+    if (closeDonationModal) {
+        closeDonationModal.onclick = function () {
             donationModal.style.display = "none";
         }
     }
 
-    // When the user clicks anywhere outside of the donation modal, close it
-    window.onclick = function(event) {
-        if (event.target == donationModal) {
+    // When the user clicks anywhere outside of the modals, close them
+    window.onclick = function (event) {
+        if (event.target === newsletterModal) {
+            newsletterModal.style.display = "none";
+        }
+        if (event.target === donationModal) {
             donationModal.style.display = "none";
+        }
+    }
+
+    // Get the donation link
+    var donationLink = document.getElementById('donationsLink');
+
+    // When the user clicks on the donation link, show the donation modal
+    if (donationLink) {
+        donationLink.onclick = function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+            donationModal.style.display = "block";
         }
     }
 });
+
 
 
 

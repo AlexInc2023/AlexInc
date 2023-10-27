@@ -2,8 +2,8 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Alex Inc. - About</title>
-    <meta name="description" content="Alex Inc.">
+    <title>Alex Inc. - Donations</title>
+    <meta name="description" content="Alex Inc. Donations">
     <meta name="author" content="Spring Software Agency">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/default.css">
@@ -21,7 +21,7 @@
         <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
         <ul id="nav" class="nav">
             <li><a href="index.html">Home</a></li>
-            <li class="current"><a href="about.html">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="events.html">Upcoming Events</a></li>
             <li><a href="boardmembers.html">Board Members</a></li>
             <li><a href="donations.html">Donations</a></li>
@@ -29,17 +29,21 @@
     </nav>
     <!-- end nav -->
 
-    <!-- About section -->
-    <section id="about">
+    <!-- Donations section -->
+    <section id="donations">
         <div class="row section-intro">
             <div class="col-twelve">
-                <h5>Alex Mission Statement</h5>
+                <h5>Support Alex Inc.</h5>
                 <div class="intro-info">
                     <img src="images/ALEXsmall.png" alt="Alex Principal Logo" style="width:200px; height:auto;">
                 </div>
                 <p class="lead">
-                    Alex represents acceptance, love, equality, and Xenacious. It's mission is to promote a safe and compassionate community and coordinate educational opportunities for LGBTQIA+ youth families and allies. By partnering with our local communities, our goal is to create a society where everybody is treated equally and fairly and can live their lives as their true authentic selves.
+                    Your donations help us to make a difference. Thank you for your support!
                 </p>
+                <!-- Donation Button -->
+                <div class="donate-button">
+                    <a href="#" class="button" onclick="document.getElementById('donationModal').style.display='block'">Donate Now</a>
+                </div>
             </div>
         </div>
     </section>
@@ -57,13 +61,13 @@
     <script src="js/init.js"></script>
 
     <!-- Donation Modal -->
-   <div id="donationModal" class="modal">
-    <div class="modal-content">
-       <span class="close-btn">&times;</span>
-       <h2>Donation Notice</h2>
-       <p>All donations support ALEX. You will be redirected to a different site for donations.</p>
-       <a href="https://www.guilfordpride.com/checkout/donate?donatePageId=63da929ed689af4196cf4056" class="subscribe-btn" target="_blank">Proceed to Donate</a>
+    <div id="donationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Donation Notice</h2>
+            <p>All donations support ALEX. You will be redirected to a different site for donations.</p>
+            <a href="https://www.guilfordpride.com/checkout/donate?donatePageId=63da929ed689af4196cf4056" class="subscribe-btn" target="_blank">Proceed to Donate</a>
+        </div>
     </div>
- </div>
 </body>
 </html>
