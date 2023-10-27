@@ -58,7 +58,7 @@
                         <p>Ages: 14-20</p>
                     </div>
                 </div>
-                <div class="event-item" data-event-date="2024-1-06">
+                <div class="event-item" data-event-date="2024-01-06">
                     <div class="event-image">
                         <img src="images/Trans101Flier"
                             alt="Trans 101 with Tony Ferraiolo and Clare McCarthy">
@@ -87,37 +87,25 @@
                         Software Agency</a></p>
             </div>
         </footer>
-
         <!-- Java Script -->
         <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/waypoints.js"></script>
         <script src="js/init.js"></script>
-
-        <!-- Donation Modal -->
-        <div id="donationModal" class="modal">
-            <div class="modal-content">
-                <span class="close-btn">&times;</span>
-                <h2>Donation Notice</h2>
-                <p>All donations support ALEX. You will be redirected to a
-                    different site for donations.</p>
-                <a
-                    href="https://www.guilfordpride.com/checkout/donate?donatePageId=63da929ed689af4196cf4056"
-                    class="subscribe-btn" target="_blank">Proceed to Donate</a>
-            </div>
-        </div>
-    </body>
-    <!-- Script to remove past events -->
+        
+        <!-- Script to remove past events -->
     <script> 
-    document.addEventListener('DOMContentLoaded', function() {
-        var currentDate = new Date();
-        var events = document.querySelectorAll('.event-item');
-    
-        events.forEach(function(event) {
-            var eventDate = new Date(event.getAttribute('data-event-date'));
-            if (eventDate < currentDate) {
-                event.remove();
-            }
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentDate = new Date();
+            var events = document.querySelectorAll('.event-item');
+        
+            events.forEach(function(event) {
+                var eventDate = new Date(event.getAttribute('data-event-date'));
+                if (eventDate < currentDate) {
+                    event.remove();
+                }
+            });
         });
-    });
-    </script>
+        </script>
+    </body>
+    
 </html>
