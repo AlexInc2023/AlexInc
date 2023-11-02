@@ -95,15 +95,17 @@ function closeModal(modalId) {
 }
 
 // Close the modal if the user clicks outside of the modal content
-window.onclick = function (event) {
-    const modalIds = ["myModal", "modalSarah", "modalKevin", "modalCameron", "modalOther", "modalScott", "modalSara"]; // Add all modal ids here
+window.onload = function() {
+    const modalIds = ["modalSarah", "modalKevin", "modalCameron", "modalOther", "modalScott", "modalSara"];
     modalIds.forEach(id => {
         const modal = document.getElementById(id);
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
     });
-}
+};
 // Download flier
 document.querySelectorAll('.item-wrap a').forEach(function (link) {
     link.addEventListener('click', function () {
