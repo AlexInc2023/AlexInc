@@ -96,7 +96,7 @@ function closeModal(modalId) {
 
 // Close the modal if the user clicks outside of the modal content
 window.onload = function() {
-    const modalIds = ["modalSarah", "modalKevin", "modalCameron", "modalOther", "modalScott", "modalSara"];
+    const modalIds = ["modalSarah", "modalKevin", "modalCameron", "modalScott", "modalSara"];
     modalIds.forEach(id => {
         const modal = document.getElementById(id);
         modal.addEventListener('click', function(event) {
