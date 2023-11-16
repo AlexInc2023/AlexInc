@@ -81,7 +81,22 @@ function getRandomPrideColor() {
     const randomIndex = Math.floor(Math.random() * prideColors.length);
     return prideColors[randomIndex];
 }
+document.addEventListener('DOMContentLoaded', function() {
+    let lastScrollTop = 0;
+    const navBar = document.getElementById('nav-wrap');
 
+    window.addEventListener("scroll", function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            navBar.classList.add('hidden');
+        } else {
+            // Scrolling up
+            navBar.classList.remove('hidden');
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+    }, false);
+});
 // Function to open a modal
 function openModal(modalId) {
     const modal = document.getElementById(modalId);

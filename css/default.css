@@ -1246,7 +1246,7 @@ input[type="checkbox"] {
 
 .events-container {
    overflow: auto; /* Allows scrolling if content overflows */
-   padding-bottom: 20px; /* Adds space at the bottom */
+   padding-bottom: 0px; /* Adds space at the bottom */
 }
 
 footer {
