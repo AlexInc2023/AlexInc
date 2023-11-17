@@ -81,6 +81,7 @@ function getRandomPrideColor() {
     const randomIndex = Math.floor(Math.random() * prideColors.length);
     return prideColors[randomIndex];
 }
+// makes nav bar hidden when scrolled down
 document.addEventListener('DOMContentLoaded', function() {
     let lastScrollTop = 0;
     const navBar = document.getElementById('nav-wrap');

@@ -380,10 +380,12 @@ ul#nav li.current a { color: #F06000; }
 /*Events */
 .events-container {
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center;     /* Center content vertically */
-  height: 150vh;           /* Take up the full viewport height */
-  flex-direction: column;  /* Stack children vertically */
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Adjust this as needed */
+  flex-direction: column;
+  overflow: visible; /* Changed from auto to visible */
+  padding-bottom: 0px;
 }
 
 .events-content {
