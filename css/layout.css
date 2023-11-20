@@ -130,13 +130,8 @@ header .scrolldown a {
    line-height: 42px;
    color: #fff;
    border-radius: 100%;
-
-   -webkit-transition: all .3s ease-in-out;
-   -moz-transition: all .3s ease-in-out;
-   -o-transition: all .3s ease-in-out;
-   transition: all .3s ease-in-out;
+   transition: all 2s ease;
 }
-
 
 /* primary navigation*/
 #nav-wrap ul, #nav-wrap li, #nav-wrap a {
@@ -506,11 +501,11 @@ ul#nav li.current a { color: #F06000; }
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 5% auto; /* Adjusted margin for better vertical alignment */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
-  max-width: 500px;
+  width: 90%; /* More responsive width */
+  max-width: 500px; /* Maximum width */
   text-align: center;
 }
 
@@ -596,8 +591,9 @@ ul#nav li.current a { color: #F06000; }
 }
 
 .modal-header img {
-  width: 50%; 
-  margin-bottom: 20px; 
+  width: 100%; /* Full width within its container */
+  max-width: 200px; /* Maximum size */
+  margin-bottom: 20px;
 }
 
 .modal-bio {
@@ -612,6 +608,7 @@ ul#nav li.current a { color: #F06000; }
   font-size: 28px;
   font-weight: bold;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .modal-header {
@@ -635,7 +632,22 @@ ul#nav li.current a { color: #F06000; }
   text-decoration: none;
   cursor: pointer;
 }
+/*Mobile for modal */ 
 
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    width: 95%; /* Even wider on very small screens */
+    margin: 10% auto; /* Increased margin for smaller screens */
+  }
+
+  .close {
+    font-size: 36px; /* Larger close button for better accessibility */
+  }
+
+  .modal-header h5, .modal-header p, .modal-bio {
+    font-size: larger; /* Larger font size for readability */
+  }
+}
 
 /* Portfolio Content */
 #portfolio-wrapper .columns { margin-bottom: 0px; }
