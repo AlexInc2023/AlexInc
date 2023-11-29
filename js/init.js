@@ -112,7 +112,7 @@ function closeModal(modalId) {
 
 // Close the modal if the user clicks outside of the modal content
 window.onload = function() {
-    const modalIds = ["modalSarah", "modalKevin", "modalCameron", "modalScott", "modalSara"];
+    const modalIds = ["modalSarah", "modalKevin", "modalCameron", "modalScott", "modalSara","registerModal","registerModal2"];
     modalIds.forEach(id => {
         const modal = document.getElementById(id);
         modal.addEventListener('click', function(event) {
@@ -172,7 +172,7 @@ function closeModal(modalId) {
 
 // Close the modal if the user clicks outside of the modal content
 window.onclick = function (event) {
-    const modalIds = ["myModal", "modalSarah", "modalKevin", "modalCameron", "modalOther", "modalScott", "modalSara"]; // Add all modal ids here
+    const modalIds = ["myModal", "modalSarah", "modalKevin", "modalCameron", "modalOther", "modalScott", "modalSara","registerModal","registerModal2"];
     modalIds.forEach(id => {
         const modal = document.getElementById(id);
         if (event.target === modal) {

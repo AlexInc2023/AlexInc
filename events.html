@@ -55,15 +55,25 @@
                         <p>Location: 158 S Montowese St, Branford CT</p>
                         <p>Time: 6:00pm-10:00pm</p>
                         <p>Ages: 14-20</p>
-                        <p><a href="https://forms.gle/3kRQeMLdvc1sQr2E8"
-                                target="_blank">Click to register for this
-                                event!</a></p>
-                    </div> 
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmcNeBeGf0x97sjziqYfYr97awoEY27CU64La2PRsTkDaaFg/viewform?embedded=true" width="640" height="772" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        <p><a href="javascript:void(0);"
+                                onclick="openModal('registerModal')">Click to
+                                register for this event!</a></p>
+                        <!-- Modal for Event Registration -->
+                        <div id="registerModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close"
+                                    onclick="closeModal('registerModal')">&times;</span>
+                                <iframe
+                                    src="https://docs.google.com/forms/d/e/1FAIpQLScmcNeBeGf0x97sjziqYfYr97awoEY27CU64La2PRsTkDaaFg/viewform?embedded=true"
+                                    width="640" height="772" frameborder="0"
+                                    marginheight="0" marginwidth="0">Loading…</iframe>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="event-item" data-event-date="2024-01-06">
                     <div class="event-image">
-                         <img src="images/Trans101.jpg"
+                        <img src="images/Trans101.jpg"
                             alt="Trans 101 with Tony Ferraiolo and Clare McCarthy">
                     </div>
                     <div class="event-info">
@@ -72,29 +82,38 @@
                         <p>Location: Sent upon email once signed up </p>
                         <p>Time: 6:30pm-8:00pm</p>
                         <p>Age: 18+</p>
-                        <p><a href="https://forms.gle/P91JsFE8VtfgJnxy8"
-                                target="_blank">Click to register for this
-                                event!</a></p>
+                        <p><a href="javascript:void(0);"
+                                onclick="openModal('registerModal2')">Click to
+                                register for this event!</a></p>
+                        <!-- Modal for Event Registration -->
+                        <div id="registerModal2" class="modal">
+                            <div class="modal-content">
+                                <span class="close"
+                                    onclick="closeModal('registerModal2')">&times;</span>
+                                <iframe
+                                    src="https://docs.google.com/forms/d/e/1FAIpQLSfm-lxi0AtA3gCV0Wp6QBlCYTExuTxPnGNJ5ZJnqY51IHhqHA/viewform?embedded=true"
+                                    width="640" height="504" frameborder="0"
+                                    marginheight="0" marginwidth="0">Loading…</iframe>
+                            </div>
+                        </div>
                     </div>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfm-lxi0AtA3gCV0Wp6QBlCYTExuTxPnGNJ5ZJnqY51IHhqHA/viewform?embedded=true" width="640" height="504" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                </div>
-                
-            </div>
-        </section>
-        <!-- Portfolio Section End-->
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer-bottom">
-                <p>© 2023 Developed by <a
-                        href="https://www.springsoftwareagency.com/home"
-                        target="_blank" rel="noopener noreferrer">Spring
-                        Software Agency</a></p>
-            </div>
-        </footer>
-        <!-- Java Script -->
-        <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/waypoints.js"></script>
-        <script src="js/init.js"></script>
-    </body>
-</html>
+                </div>
+            </section>
+            <!-- Portfolio Section End-->
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-bottom">
+                    <p>© 2023 Developed by <a
+                            href="https://www.springsoftwareagency.com/home"
+                            target="_blank" rel="noopener noreferrer">Spring
+                            Software Agency</a></p>
+                </div>
+            </footer>
+            <!-- Java Script -->
+            <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+            <script src="js/waypoints.js"></script>
+            <script src="js/init.js"></script>
+        </body>
+    </html>

@@ -505,7 +505,7 @@ ul#nav li.current a { color: #F06000; }
   padding: 20px;
   border: 1px solid #888;
   width: 90%; /* More responsive width */
-  max-width: 500px; /* Maximum width */
+  max-width: 700px; /* Maximum width */
   text-align: center;
 }
 
@@ -580,14 +580,6 @@ ul#nav li.current a { color: #F06000; }
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
-}
-.modal-content {
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 50%; 
-  background-color: #fff;
-  text-align: center;
 }
 
 .modal-header img {
