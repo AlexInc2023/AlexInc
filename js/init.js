@@ -239,17 +239,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    var currentDate = new Date();
-    var events = document.querySelectorAll('.event-item');
-
-    events.forEach(function (event) {
-        var eventDate = new Date(event.getAttribute('data-event-date'));
-        if (eventDate < currentDate) {
-            event.remove();
-        }
-    });
-});
 
 
 
