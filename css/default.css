@@ -1400,3 +1400,6 @@ footer {
    margin-right: auto !important;
    text-align: center !important;
 }
+a[href*="elfsight.com"][rel="noreferrer"] {
+   display: none !important;
+}
