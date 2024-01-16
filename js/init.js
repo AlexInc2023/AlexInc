@@ -238,7 +238,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
-
+// This function will look for the Elfsight link and hide it
+function hideElfsightLink() {
+    var links = document.querySelectorAll('a[href*="elfsight.com"][target="_blank"][rel="noreferrer"]');
+    links.forEach(function(link) {
+      link.style.display = 'none';
+    });
+  }
+  
+  // This will run the function above immediately after the page loads
+  window.addEventListener('load', hideElfsightLink);
+  
+  // This will repeatedly run the function above every 500 milliseconds
+  // to check for the Elfsight link and hide it in case it is added after page load
+  var intervalId = setInterval(hideElfsightLink, 500);
+  
+  // Optional: Clear the interval after a certain period if you know the widget doesn't take long to load
+  setTimeout(function() {
+    clearInterval(intervalId);
+  }, 10000); // Stop checking after 10 seconds
+  
 
 
 
